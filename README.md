@@ -6,13 +6,13 @@
   <a href="#computer-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tech">Tech</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#gear-get-started">Get Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#references">References</a>
 </p>
 
 <br/>
 
 ## :computer: Project
-Géfersom Bejos, CEO of the large Brazilian e-commerce company amazônia, hired ateliware to develop a new system responsible for calculating the fastest delivery route for his new drone system. Once the starting point, the object collection point, and the delivery point are defined, his drones should, in the shortest time possible, reach their destination. Amazon is already a technology company, so it will be providing a service by which it is possible to find out the time needed to move between segments.
-
+**Géfersom Bejos**, CEO of the large Brazilian e-commerce company *amazônia*, hired [ateliware](https://ateliware.com/en/) to develop a new system responsible for **calculating the fastest delivery route for his new drone system**. Once the starting point, the object collection point, and the delivery point are defined, his drones should, in the shortest time possible, reach their destination.
 ## :rocket: Tech
 
 - [Docker](https://docs.docker.com/get-docker/)
@@ -32,11 +32,6 @@ Géfersom Bejos, CEO of the large Brazilian e-commerce company amazônia, hired 
     docker-compose up
 ```
 
-
-### Run
-
-Soon!
-
-### Test
+### References
 
 Soon!

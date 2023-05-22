@@ -24,7 +24,7 @@ router = APIRouter(prefix="/api/v1/health")
     dependencies=(NoCache,),
     tags=["Utils"]
 )
-async def ping():
+def ping():
     """
     With this _ping_ call you will be checking:
 
@@ -42,7 +42,7 @@ async def ping():
     dependencies=(NoCache,),
     tags=["Utils"]
 )
-async def get_version() -> str:
+def get_version() -> str:
     """
     Returns API version in string format.
     """

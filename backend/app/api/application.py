@@ -20,9 +20,11 @@ def configure_middlewares(app: FastAPI, settings: "Settings") -> None:
 
 def configure_routes(app: FastAPI) -> None:
     from .routers.health_router import router as health_router
+    from .routers.delivery_router import router as delivery_router
 
     routes = (
         health_router,
+        delivery_router
     )
 
     for router in routes:

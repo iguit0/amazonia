@@ -12,8 +12,9 @@ class DeliveryCoordinatesRequest(BaseModel):
         title="Object pickup position. Where the drone is going to pick up the package",
         example="B2",
     )
-    destination: str = Field(..., title="Destination position. Where the drone is going \
+    destination: str = Field(
+        ...,
+        title="Destination position. Where the drone is going \
         to deliver the package",
         example="C8",
     )
-

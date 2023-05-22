@@ -19,13 +19,10 @@ def configure_middlewares(app: FastAPI, settings: "Settings") -> None:
 
 
 def configure_routes(app: FastAPI) -> None:
-    from .routers.health_router import router as health_router
     from .routers.delivery_router import router as delivery_router
+    from .routers.health_router import router as health_router
 
-    routes = (
-        health_router,
-        delivery_router
-    )
+    routes = (health_router, delivery_router)
 
     for router in routes:
         app.include_router(router)
@@ -48,7 +45,7 @@ def create_fastapi_application(settings: "Settings") -> FastAPI:
             {
                 "name": "Utils",
                 "description": "Utilitary Services",
-            }
+            },
         ],
         openapi_url=settings.openapi_path,
     )

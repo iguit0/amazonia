@@ -1,8 +1,6 @@
 from typing import final
 
-
 from app.cdi import Module, SingletonScope
-
 
 
 @final
@@ -16,9 +14,7 @@ class UtilsModule(Module):
         return settings
 
     def configure(self):
-        from .settings import (
-            Settings,
-        )
+        from .settings import Settings
 
         self.bind(
             Settings, scope=SingletonScope, to_provider=self.settings_provider

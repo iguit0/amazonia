@@ -1,4 +1,4 @@
-from typing import Literal, Set
+from typing import Set
 
 from pydantic import BaseSettings, Field
 
@@ -12,9 +12,7 @@ class Settings(BaseSettings):
 
     openapi_path: str = Field(
         "/openapi.json",
-        title=(
-            "Path to export OpenAPI, leave empty to not export."
-        ),
+        title=("Path to export OpenAPI, leave empty to not export."),
     )
 
     @property

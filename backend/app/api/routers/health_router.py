@@ -22,7 +22,7 @@ router = APIRouter(prefix="/api/v1/health")
 - `pong`: Boolean value indicating success. Always `true`.
 - `version`: API version.""",
     dependencies=(NoCache,),
-    tags=["Utils"]
+    tags=["Utils"],
 )
 def ping():
     """
@@ -40,7 +40,7 @@ def ping():
     response_description="Returns the application version in string format",
     response_class=PlainTextResponse,
     dependencies=(NoCache,),
-    tags=["Utils"]
+    tags=["Utils"],
 )
 def get_version() -> str:
     """

@@ -1,6 +1,9 @@
 FROM python
 WORKDIR /app
-COPY ./requirements.txt .
-RUN pip install -r ./requirements.txt
+ADD requirements.txt .
+COPY requirements ./requirements/
+RUN python3 -m venv venv \
+    && venv/bin/python -m pip install pip setuptools wheel --no-cache-dir --upgrade \
+    && venv/bin/python -m pip install --no-cache-dir -r requirements.txt
 COPY . .
 EXPOSE 8000

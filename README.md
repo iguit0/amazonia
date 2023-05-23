@@ -23,8 +23,9 @@ Géfersom Bejos, CEO of the large Brazilian e-commerce company *amazônia*, hire
 
 ## Features
 
-- [ ] Calculate shortest path.
+- [x] Calculate shortest path.
 - [ ] List the last 10 trips previously calculated.
+- [ ] Testing
 
 ## Get Started
 

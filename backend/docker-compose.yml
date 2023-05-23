@@ -4,7 +4,7 @@ services:
   web:
     build: .
     working_dir: /code/app
-    command: uvicorn main:app --host 0.0.0.0 --reload
+    command: uvicorn api_main:app --host 0.0.0.0 --reload
     environment:
       DEBUG: 1
     volumes:

@@ -23,3 +23,12 @@ class DeliveryCoordinatesRequest(BaseModel):
         example="C8",
         regex=VALID_POSITION,
     )
+
+
+class DeliveryResponse(BaseModel):
+    best_route: list[str] = Field(
+        ..., title="Best route to deliver the package"
+    )
+    elapsed_time: float = Field(
+        ..., title="Time elapsed to deliver the package"
+    )

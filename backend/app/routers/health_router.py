@@ -1,4 +1,4 @@
-from app.schemas.health_schemas import HealthResponse
+from app.schemas.health import HealthResponse
 from app.utils.settings import APP_VERSION
 
 from .base import APIRouter, NoCache, PlainTextResponse

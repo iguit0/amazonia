@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="frontend/src/assets/images/amazonia_logo.png" width="150" height="50" alt="Amazonia" style="filter: brightness(0) invert(1)" />
+  <img src="frontend/src/assets/images/amazonia_logo.png" width="150" height="50" alt="Amazonia" />
 </h1>
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)

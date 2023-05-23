@@ -1,14 +1,7 @@
-from typing import TYPE_CHECKING
-
-from app.api.schemas.delivery_schemas import DeliveryCoordinatesRequest
-from app.cdi import Injector
+from app.schemas.delivery_schemas import DeliveryCoordinatesRequest
 
 from .base import APIRouter, NoCache
 
-if TYPE_CHECKING:
-    from app.utils.settings import Settings
-
-settings: "Settings" = Injector.lazy_inject("Settings")
 router = APIRouter(prefix="/api/v1/deliveries")
 
 

@@ -1,14 +1,8 @@
-from typing import TYPE_CHECKING
-
-from app.api.schemas.health_schemas import HealthResponse
-from app.cdi import Injector
+from app.schemas.health_schemas import HealthResponse
+from app.utils.settings import APP_VERSION
 
 from .base import APIRouter, NoCache, PlainTextResponse
 
-if TYPE_CHECKING:
-    from app.utils.settings import Settings
-
-settings: "Settings" = Injector.lazy_inject("Settings")
 router = APIRouter(prefix="/api/v1/health")
 
 
@@ -31,7 +25,7 @@ def ping():
     - Whether the application is responding/alive.
     """
 
-    return {"pong": True, "version": settings.version}
+    return {"pong": True, "version": APP_VERSION}
 
 
 @router.get(
@@ -47,4 +41,4 @@ def get_version() -> str:
     Returns API version in string format.
     """
 
-    return settings.version
+    return APP_VERSION

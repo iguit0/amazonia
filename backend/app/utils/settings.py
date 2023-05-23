@@ -2,7 +2,7 @@ from typing import Set
 
 from pydantic import BaseSettings, Field
 
-from .release import APP_VERSION
+from app.utils.release import APP_VERSION
 
 
 class Settings(BaseSettings):

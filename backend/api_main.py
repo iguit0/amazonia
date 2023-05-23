@@ -1,7 +1,3 @@
-from fastapi import FastAPI
+from app.core.application import create_fastapi_application
 
-
-def create_app() -> FastAPI:
-    from app.cdi import Injector
-
-    return Injector.inject(FastAPI)
+app = create_fastapi_application()

@@ -4,7 +4,9 @@
 
 ### Technologies Used
 
-Soon.
+[Python](https://www.python.org/)
+[FastAPI](https://fastapi.tiangolo.com/)
+
 
 ### Installation
 
@@ -14,6 +16,6 @@ Soon.
 
 Soon.
 
-### Running the Backend
+### Running
 
 Soon.

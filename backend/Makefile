@@ -4,17 +4,17 @@ ISORT_PYTHON_VERSION=311
 
 .PHONY: build-venv
 build-venv:
-	python3.11 -m venv venv
+	python -m venv venv
 
 .PHONY: requirements-dev
 requirements-dev:
 	python -m pip install --upgrade pip
 	pip install wheel
-	pip install -r requirements/develop.txt
+	pip install -r requirements.txt
 
 .PHONY: run-dev
 run-dev:
-	uvicorn --factory api_main:create_app --reload
+	uvicorn api_main:app --reload
 
 # Lint Check
 

@@ -1,26 +1,20 @@
-from typing import TYPE_CHECKING
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-if TYPE_CHECKING:
-    from app.utils.settings import Settings
 
-
-def configure_middlewares(app: FastAPI, settings: "Settings") -> None:
+def configure_middlewares(app: FastAPI) -> None:
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_allow_origins,
+        allow_origins={"*"},
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
-        expose_headers=("X-Pagination",),
     )
 
 
 def configure_routes(app: FastAPI) -> None:
-    from .routers.delivery_router import router as delivery_router
-    from .routers.health_router import router as health_router
+    from app.routers.delivery_router import router as delivery_router
+    from app.routers.health_router import router as health_router
 
     routes = (health_router, delivery_router)
 
@@ -28,7 +22,9 @@ def configure_routes(app: FastAPI) -> None:
         app.include_router(router)
 
 
-def create_fastapi_application(settings: "Settings") -> FastAPI:
+def create_fastapi_application() -> FastAPI:
+    from app.utils.settings import APP_VERSION
+
     from .openapi.generator import generate_description
 
     description_md = generate_description()
@@ -36,7 +32,7 @@ def create_fastapi_application(settings: "Settings") -> FastAPI:
     app = FastAPI(
         title="Amazonia API",
         description=description_md,
-        version=settings.version,
+        version=APP_VERSION,
         openapi_tags=[
             {
                 "name": "Deliveries",
@@ -47,10 +43,9 @@ def create_fastapi_application(settings: "Settings") -> FastAPI:
                 "description": "Utilitary Services",
             },
         ],
-        openapi_url=settings.openapi_path,
     )
 
-    configure_middlewares(app, settings)
+    configure_middlewares(app)
     configure_routes(app)
 
     return app

@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-This monorepository includes both the backend and frontend components of our application, providing a consolidated codebase for streamlined development and collaboration.
+This monorepository contains both the backend and frontend components of our application, which provides a single, unified codebase for more efficient development and collaboration.
 
 
 ## Table of Contents

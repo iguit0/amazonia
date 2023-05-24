@@ -13,7 +13,8 @@ A sleek and intuitive user interface that visualizes the fastest delivery route 
 ## Features
 
 - [x] Board component.
-- [ ] Clear route.
+- [x] Clear route.
+- [ ] Improve Not Found page.
 - [ ] Change board theme.
 - [ ] Testing
 

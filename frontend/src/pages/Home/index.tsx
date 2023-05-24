@@ -9,6 +9,8 @@ import { FiPackage } from 'react-icons/fi'
 import { isEqual, parsePosition } from '../../utils/parsers'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
 import { FaRoute, FaFlagCheckered } from 'react-icons/fa'
+import { VscClearAll } from 'react-icons/vsc'
+import { BiPaint } from 'react-icons/bi'
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -118,8 +120,13 @@ export function Home() {
       />
 
       <ButtonGrid>
-        <Button onClick={clearRoute}>Clear route</Button>
-        <Button disabled>Change board theme</Button>
+        <Button onClick={clearRoute} disabled={!routeFullfilled}>
+          <VscClearAll style={{ marginRight: '8px' }} />
+          Clear delivery route
+        </Button>
+        <Button disabled>
+          <BiPaint style={{ marginRight: '4px' }} /> Change board theme
+        </Button>
       </ButtonGrid>
     </PageWrapper>
   )

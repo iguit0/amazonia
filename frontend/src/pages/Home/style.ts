@@ -7,11 +7,6 @@ export const PageWrapper = styled.div`
   justify-content: center;
   height: 100vh;
 
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; */
-
   background-color: #b1bfd8;
   background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
 `
@@ -33,6 +28,10 @@ export const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #bdbdbd;
+  }
 
   &:disabled {
     cursor: not-allowed;

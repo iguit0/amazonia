@@ -10,6 +10,13 @@ A sleek and intuitive user interface that visualizes the fastest delivery route 
 - [ESLint](https://github.com/eslint/eslint)
 - [Prettier](https://github.com/prettier/prettier)
 
+## Features
+
+- [x] Board component.
+- [ ] Clear route.
+- [ ] Change board theme.
+- [ ] Testing
+
 ### Installation
 
 Soon.

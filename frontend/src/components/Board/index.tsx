@@ -1,29 +1,16 @@
-import React, { useState } from 'react'
+import React, { memo } from 'react'
 import { BoardContainer, ChessboardSquare } from './style'
+import { GiDeliveryDrone } from 'react-icons/gi'
+import { FiPackage } from 'react-icons/fi'
+import { IoIosHome } from 'react-icons/io'
 
-const Board: React.FC = () => {
-  const [clickedSquares, setClickedSquares] = useState<number[][]>([])
+type BoardProps = {
+  onClickSquare: (row: number, col: number) => void
+  getSelectedType: (row: number, col: number) => string
+  allSelected: boolean
+}
 
-  const handleSquareClick = (row: number, col: number) => {
-    const isAlreadyClicked = clickedSquares.some(
-      ([clickedRow, clickedCol]) => clickedRow === row && clickedCol === col,
-    )
-
-    if (isAlreadyClicked) {
-      const updatedSquares = clickedSquares.filter(
-        ([clickedRow, clickedCol]) => clickedRow !== row || clickedCol !== col,
-      )
-      setClickedSquares(updatedSquares)
-    } else {
-      const newSquare = [row, col]
-      setClickedSquares([...clickedSquares, newSquare])
-    }
-  }
-
-  const clearClickedSquares = () => {
-    setClickedSquares([])
-  }
-
+const Board: React.FC<BoardProps> = ({ allSelected, getSelectedType, onClickSquare }) => {
   const renderBoard = (): JSX.Element[] => {
     const boardSize = 8
     const board: JSX.Element[] = []
@@ -43,20 +30,35 @@ const Board: React.FC = () => {
           ? darkSquareColor
           : lightSquareColor
 
-        const isSquareClicked = clickedSquares.some(
-          ([clickedRow, clickedCol]) => clickedRow === row && clickedCol === col,
-        )
         const rowInitial = String.fromCharCode(65 + row)
         const colInitial = col + 1
+
+        const position = `${rowInitial}${colInitial}`
 
         board.push(
           <ChessboardSquare
             key={`${row}-${col}`}
             squareColor={squareColor}
-            onClick={() => handleSquareClick(row, col)}
+            onClick={() => onClickSquare(row, col)}
+            disabled={allSelected}
           >
-            {isSquareClicked && <div>OK</div>}
-            <span>{`${rowInitial}${colInitial}`}</span>
+            {getSelectedType(row, col) === 'origin' && (
+              <GiDeliveryDrone size='28px' color={squareColor === '#303030' ? 'white' : 'black'} />
+            )}
+
+            {getSelectedType(row, col) === 'pickup' && (
+              <FiPackage size='28px' color={squareColor === '#303030' ? 'white' : 'black'} />
+            )}
+
+            {getSelectedType(row, col) === 'destination' && (
+              <IoIosHome size='28px' color={squareColor === '#303030' ? 'white' : 'black'} />
+            )}
+
+            {!allSelected && getSelectedType(row, col) === '' ? (
+              <span style={{ fontSize: '14px', opacity: '60%', color: 'whitesmoke' }}>
+                {position}
+              </span>
+            ) : null}
           </ChessboardSquare>,
         )
       }
@@ -65,13 +67,7 @@ const Board: React.FC = () => {
     return board
   }
 
-  return (
-    <>
-      <BoardContainer>{renderBoard()}</BoardContainer>
-
-      <button onClick={clearClickedSquares}>Clear</button>
-    </>
-  )
+  return <BoardContainer>{renderBoard()}</BoardContainer>
 }
 
-export default Board
+export default memo(Board)

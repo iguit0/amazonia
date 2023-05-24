@@ -14,6 +14,7 @@ A sleek and intuitive user interface that visualizes the fastest delivery route 
 
 - [x] Board view.
 - [x] Clear route.
+- [ ] Show the last 10 trips previously calculated.
 - [ ] Improve Not Found page.
 - [ ] Change board theme.
 - [ ] Testing.

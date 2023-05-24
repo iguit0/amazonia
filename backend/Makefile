@@ -16,6 +16,9 @@ requirements-dev:
 run-dev:
 	uvicorn api_main:app --reload
 
+load-env:
+	@cp devtools/dotenv.dev .env
+
 # Lint Check
 
 bandit-check:

@@ -4,9 +4,15 @@ A lightweight RESTful service for optimizing drone delivery routes, enabling bus
 
 ### Technologies Used
 
-[Python](https://www.python.org/)
-[FastAPI](https://fastapi.tiangolo.com/)
+- [Python](https://www.python.org/)
+- [FastAPI](https://fastapi.tiangolo.com/)
 
+
+## Features
+
+- [x] Calculate shortest path.
+- [ ] List the last 10 trips previously calculated.
+- [ ] Testing
 
 ### Installation
 

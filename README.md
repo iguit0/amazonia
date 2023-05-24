@@ -11,7 +11,6 @@ This monorepository contains both the backend and frontend components of our app
 
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-- [Features](#features)
 - [Get Started](#get-started)
   - [Installation](#installation)
 - [Contributing](#contributing)
@@ -20,12 +19,6 @@ This monorepository contains both the backend and frontend components of our app
 ## Introduction
 
 Géfersom Bejos, CEO of the large Brazilian e-commerce company *amazônia*, hired [ateliware](https://ateliware.com/en/) to develop a new system responsible for **calculating the fastest delivery route for his new drone system**. Once the starting point, the object collection point, and the delivery point are defined, his drones should, in the shortest time possible, reach their destination.
-
-## Features
-
-- [x] Calculate shortest path.
-- [ ] List the last 10 trips previously calculated.
-- [ ] Testing
 
 ## Get Started
 

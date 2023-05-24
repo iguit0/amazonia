@@ -13,7 +13,8 @@ export function Navbar() {
             src={PartnerLogo}
             alt='Partner logo'
             width={120}
-            style={{ filter: 'brightness(0) invert(1)' }}
+            style={{ filter: 'brightness(0) invert(1)', cursor: 'pointer' }}
+            onClick={() => window.open('https://ateliware.com/', '_blank', 'noopener noreferrer')}
           />
         </UserCredentials>
       </Container>

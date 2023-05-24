@@ -8,6 +8,7 @@ import { IoIosHome } from 'react-icons/io'
 import { FiPackage } from 'react-icons/fi'
 import { isEqual, parsePosition } from '../../utils/parsers'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
+import { FaRoute, FaFlagCheckered } from 'react-icons/fa'
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -71,7 +72,17 @@ export function Home() {
   return (
     <PageWrapper>
       <Navbar />
-      <HeaderText>Select your route</HeaderText>
+      <HeaderText>
+        {routeFullfilled ? (
+          <>
+            <FaFlagCheckered style={{ marginRight: '8px' }} /> Have a nice trip!
+          </>
+        ) : (
+          <>
+            <FaRoute style={{ marginRight: '8px' }} /> Provide your delivery route
+          </>
+        )}
+      </HeaderText>
 
       {origin.length === 0 && (
         <InstructionText>

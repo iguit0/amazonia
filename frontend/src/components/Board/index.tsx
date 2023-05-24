@@ -3,6 +3,7 @@ import { BoardContainer, ChessboardSquare } from './style'
 import { GiDeliveryDrone } from 'react-icons/gi'
 import { FiPackage } from 'react-icons/fi'
 import { IoIosHome } from 'react-icons/io'
+import { parsePosition } from '../../utils/parsers'
 
 type BoardProps = {
   onClickSquare: (row: number, col: number) => void
@@ -30,11 +31,6 @@ const Board: React.FC<BoardProps> = ({ allSelected, getSelectedType, onClickSqua
           ? darkSquareColor
           : lightSquareColor
 
-        const rowInitial = String.fromCharCode(65 + row)
-        const colInitial = col + 1
-
-        const position = `${rowInitial}${colInitial}`
-
         board.push(
           <ChessboardSquare
             key={`${row}-${col}`}
@@ -56,7 +52,7 @@ const Board: React.FC<BoardProps> = ({ allSelected, getSelectedType, onClickSqua
 
             {!allSelected && getSelectedType(row, col) === '' ? (
               <span style={{ fontSize: '14px', opacity: '60%', color: 'whitesmoke' }}>
-                {position}
+                {parsePosition([row, col])}
               </span>
             ) : null}
           </ChessboardSquare>,

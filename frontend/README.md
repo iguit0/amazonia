@@ -12,20 +12,37 @@ A sleek and intuitive user interface that visualizes the fastest delivery route 
 
 ## Features
 
-- [x] Board component.
+- [x] Board view.
 - [x] Clear route.
 - [ ] Improve Not Found page.
 - [ ] Change board theme.
-- [ ] Testing
+- [ ] Testing.
 
-### Installation
-
-Soon.
 
 ### Configuration
 
-Soon.
+Use the recommended node version
+
+```shell
+    nvm use
+```
+
+Install dependencies
+
+```shell
+    yarn
+```
+
+Configure the env file
+
+```shell
+    cp .env.example .env
+```
 
 ### Running the Frontend
 
-Soon.
+```shell
+    yarn dev
+```
+
+To open the app navigate to http://localhost:3000

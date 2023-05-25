@@ -9,6 +9,7 @@ A sleek and intuitive user interface that visualizes the fastest delivery route 
 - [styled-components](https://github.com/styled-components/styled-components)
 - [ESLint](https://github.com/eslint/eslint)
 - [Prettier](https://github.com/prettier/prettier)
+- [react-icons](https://react-icons.github.io/react-icons)
 
 ## Features
 
@@ -17,6 +18,7 @@ A sleek and intuitive user interface that visualizes the fastest delivery route 
 - [ ] Show the last 10 trips previously calculated.
 - [ ] Improve Not Found page.
 - [ ] Change board theme.
+- [ ] Responsiveness: improve mobile view
 - [ ] Testing.
 
 

@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "description": "Amazonia frontend",
+  "author": "Igor Alves <igorsk89@gmail.com> (https://github.com/iguit0)",
+  "license": "MIT",
+  "engines": {
+    "node" : ">=18"
+  },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/iguit0/amazonia.git"
+	},
+  "homepage": "https://amazonia-frontend.netlify.app/",
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts start",

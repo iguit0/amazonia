@@ -24,7 +24,9 @@ A sleek and intuitive user interface that visualizes the fastest delivery route 
 
 ### Configuration
 
-Use the recommended node version
+**Use the recommended node version which is >=18.x**
+
+If you have [nvm](https://github.com/nvm-sh/nvm#installing-and-updating):
 
 ```shell
     nvm use
@@ -36,7 +38,7 @@ Install dependencies
     yarn
 ```
 
-Configure the env file
+Copy env example
 
 ```shell
     cp .env.example .env
@@ -48,4 +50,4 @@ Configure the env file
     yarn dev
 ```
 
-To open the app navigate to http://localhost:3000
+To open the running local app navigate to http://localhost:3000

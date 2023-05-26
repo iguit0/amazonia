@@ -18,6 +18,7 @@ run-dev:
 
 load-env:
 	@cp devtools/dotenv.dev .env
+	@echo "Development environment file loaded!"
 
 # Lint Check
 

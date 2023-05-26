@@ -18,6 +18,7 @@ A lightweight RESTful service for optimizing drone delivery routes, enabling bus
 - [x] Create a Makefile.
 - [x] Calculate shortest path.
 - [ ] List the last 10 trips previously calculated.
+- [ ] Dockerize.
 - [ ] Testing.
 
 ### Configuration
@@ -34,7 +35,13 @@ A lightweight RESTful service for optimizing drone delivery routes, enabling bus
     source venv/bin/activate
 ```
 
-3. Install dependencies
+3. Configure env file
+
+```shell
+    make load-env
+```
+
+4. Install dependencies
 
 ```shell
     make requirements-dev 

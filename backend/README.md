@@ -2,7 +2,7 @@
 
 A lightweight RESTful service for optimizing drone delivery routes, enabling businesses to determine the fastest path for their aerial deliveries.
 
-### Technologies Used
+### Technologies
 
 - [Python](https://www.python.org/)
 - [FastAPI](https://fastapi.tiangolo.com/)
@@ -14,12 +14,12 @@ A lightweight RESTful service for optimizing drone delivery routes, enabling bus
 
 ## Features
 
-- [x] Linting.
-- [x] Create a Makefile.
-- [x] Calculate shortest path.
-- [ ] List the last 10 trips previously calculated.
-- [ ] Dockerize.
-- [ ] Testing.
+- [x] Linting
+- [x] Create Makefile
+- [x] Calculate shortest path using Dijkstra's algorithm
+- [ ] List the last 10 trips previously calculated
+- [ ] Dockerize
+- [ ] Testing
 
 ### Configuration
 
@@ -63,6 +63,6 @@ Run lint and type checkers to reformat files before commit
 
 To open documentation navigate to http://localhost:8000/docs
 
-### Performance
+### Routing Performance
 
-Read [PERFORMANCE.md](./PERFORMANCE.md) for more details.
+Read [PERFORMANCE.md](./PERFORMANCE.md) for more details on routing performance algorithms.

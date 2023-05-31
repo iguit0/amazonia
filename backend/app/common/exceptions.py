@@ -6,6 +6,7 @@ from fastapi import HTTPException, status
 
 
 class ApplicationException(HTTPException):
+    """Base exception for application"""
     def __init__(
         self,
         status_code: int,
@@ -21,10 +22,11 @@ class ApplicationException(HTTPException):
 
 
 class ConflictException(ApplicationException):
+    """Exception for conflict errors"""
     def __init__(
         self,
         code: int,
-        message: str = "Recurso em conflito",
+        message: str = "Conflict resource",
         detail: Any = None,
         headers: Union[Dict[str, Any], None] = None,
     ) -> None:
@@ -38,10 +40,11 @@ class ConflictException(ApplicationException):
 
 
 class UnprocessableEntityException(ApplicationException):
+    """Exception for unprocessable entity errors"""
     def __init__(
         self,
         code: int,
-        message: str = "Não foi possível processar as instruções contidas na requisição ou no arquivo",
+        message: str = "The instructions contained in the request or file could not be processed.",
         detail: Any = None,
         headers: Union[Dict[str, Any], None] = None,
     ) -> None:
@@ -55,6 +58,7 @@ class UnprocessableEntityException(ApplicationException):
 
 
 class NotFoundException(ApplicationException):
+    """Exception for not found errors"""
     def __init__(
         self,
         code: int,

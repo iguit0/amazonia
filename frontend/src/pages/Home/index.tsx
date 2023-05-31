@@ -1,33 +1,23 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Navbar } from '../../components/Navbar'
 import Board from '../../components/Board'
-import { ButtonGrid, Button, PageWrapper, HeaderText } from './style'
-import styled from 'styled-components'
+import {
+  ButtonGrid,
+  Button,
+  PageWrapper,
+  HeaderText,
+  InstructionText,
+  ContentWrapper,
+  Instructions,
+} from './style'
 import { GiDeliveryDrone } from 'react-icons/gi'
 import { IoIosHome } from 'react-icons/io'
 import { FiPackage } from 'react-icons/fi'
-import { isEqual, parsePosition } from '../../utils/parsers'
-import { BsFillInfoCircleFill } from 'react-icons/bs'
-import { FaRoute, FaFlagCheckered } from 'react-icons/fa'
 import { VscClearAll } from 'react-icons/vsc'
 import { BiPaint } from 'react-icons/bi'
-
-const ContentWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
-`
-
-const Instructions = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-`
-
-const InstructionText = styled.p`
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-`
+import { BsFillInfoCircleFill } from 'react-icons/bs'
+import { FaRoute, FaFlagCheckered } from 'react-icons/fa'
+import { isEqual, parsePosition } from '../../utils/parsers'
 
 export function Home() {
   const [origin, setOrigin] = useState<number[]>([])
@@ -69,13 +59,13 @@ export function Home() {
     setDestination([])
   }
 
-  const routeFullfilled = origin.length > 0 && pickupObject.length > 0 && destination.length > 0
+  const isRouteFulfilled = origin.length > 0 && pickupObject.length > 0 && destination.length > 0
 
   return (
     <PageWrapper>
       <Navbar />
       <HeaderText>
-        {routeFullfilled ? (
+        {isRouteFulfilled ? (
           <>
             <FaFlagCheckered style={{ marginRight: '8px' }} /> Have a nice trip!
           </>
@@ -116,11 +106,11 @@ export function Home() {
       <Board
         onClickSquare={handleSquareClick}
         getSelectedType={getSquareType}
-        allSelected={routeFullfilled}
+        allSelected={isRouteFulfilled}
       />
 
       <ButtonGrid>
-        <Button onClick={clearRoute} disabled={!routeFullfilled}>
+        <Button onClick={clearRoute} disabled={!isRouteFulfilled}>
           <VscClearAll style={{ marginRight: '8px' }} />
           Clear delivery route
         </Button>

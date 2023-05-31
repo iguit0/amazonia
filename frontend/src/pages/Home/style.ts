@@ -37,3 +37,20 @@ export const Button = styled.button`
     cursor: not-allowed;
   }
 `
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+`
+
+export const Instructions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+`
+
+export const InstructionText = styled.p`
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+`

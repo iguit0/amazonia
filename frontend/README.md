@@ -2,7 +2,7 @@
 
 A sleek and intuitive user interface that visualizes the fastest delivery route for a drone system, providing real-time insights for efficient and timely deliveries.
 
-### Technologies Used
+### Technologies
 
 - [React](https://github.com/facebook/react)
 - [TypeScript](https://github.com/microsoft/TypeScript)
@@ -13,13 +13,14 @@ A sleek and intuitive user interface that visualizes the fastest delivery route 
 
 ## Features
 
-- [x] Board view.
-- [x] Clear route.
-- [ ] Show the last 10 trips previously calculated.
-- [ ] Improve Not Found page.
-- [ ] Change board theme.
+- [x] Board view
+- [x] Clear route
+- [ ] Show the last 10 trips previously calculated
+- [ ] Improve Not Found page
+- [ ] Change board theme
 - [ ] Responsiveness: improve mobile view
-- [ ] Testing.
+- [ ] I18n
+- [ ] Testing
 
 
 ### Configuration

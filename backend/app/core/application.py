@@ -13,6 +13,7 @@ def configure_middlewares(app: FastAPI) -> None:
 
 
 def configure_routes(app: FastAPI) -> None:
+    """Configure routes for the application"""
     from app.routers.delivery_router import router as delivery_router
     from app.routers.health_router import router as health_router
 
@@ -23,6 +24,7 @@ def configure_routes(app: FastAPI) -> None:
 
 
 def create_fastapi_application() -> FastAPI:
+    """Create FastAPI application"""
     from app.utils.settings import APP_VERSION
 
     from .openapi.generator import generate_description

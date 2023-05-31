@@ -19,34 +19,35 @@ def generate_error_table():
             code=400,
             status_code=400,
             group=ErrorGroup.GENERAL,
-            description="Requisição inválida",
+            description="Invalid request",
             response_example={},
         ),
         ErrorInfo(
             code=404,
             status_code=404,
             group=ErrorGroup.GENERAL,
-            description="Não encontrado",
+            description="Not found",
             response_example={},
         ),
         ErrorInfo(
             code=422,
             status_code=422,
             group=ErrorGroup.GENERAL,
-            description="Erro de validação",
+            description="Validation error",
             response_example={},
         ),
         ErrorInfo(
             code=500,
             status_code=500,
             group=ErrorGroup.GENERAL,
-            description="Erro interno não mapeado",
+            description="Internal error",
             response_example={},
         ),
     )
 
 
 def generate_description() -> str:
+    """Generate OpenAPI description with error table"""
     from importlib.resources import files
     from json import dumps
 

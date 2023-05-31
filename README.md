@@ -45,7 +45,7 @@ Once you have cloned the repository, you may need to install the project's depen
 
 ## Contributing
 
-If you would like to contribute to this project, please follow the guidelines in the CONTRIBUTING.md file.
+If you would like to contribute to this project, please follow the guidelines in the [CONTRIBUTING](./CONTRIBUTING.md) file.
 
 ## License
 This project is licensed under the [MIT License](https://opensource.org/license/mit/). Refer to the [LICENSE](./LICENSE) file for more information.

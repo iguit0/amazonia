@@ -34,20 +34,33 @@ const Board: React.FC<BoardProps> = ({ allSelected, getSelectedType, onClickSqua
         board.push(
           <ChessboardSquare
             key={`${row}-${col}`}
+            data-testid='chessboard-square'
             squareColor={squareColor}
             onClick={() => onClickSquare(row, col)}
             disabled={allSelected}
           >
             {getSelectedType(row, col) === 'origin' && (
-              <GiDeliveryDrone size='28px' color={squareColor === '#303030' ? 'white' : 'black'} />
+              <GiDeliveryDrone
+                data-testid='drone-icon'
+                size='28px'
+                color={squareColor === '#303030' ? 'white' : 'black'}
+              />
             )}
 
             {getSelectedType(row, col) === 'pickup' && (
-              <FiPackage size='28px' color={squareColor === '#303030' ? 'white' : 'black'} />
+              <FiPackage
+                data-testid='package-icon'
+                size='28px'
+                color={squareColor === '#303030' ? 'white' : 'black'}
+              />
             )}
 
             {getSelectedType(row, col) === 'destination' && (
-              <IoIosHome size='28px' color={squareColor === '#303030' ? 'white' : 'black'} />
+              <IoIosHome
+                data-testid='home-icon'
+                size='28px'
+                color={squareColor === '#303030' ? 'white' : 'black'}
+              />
             )}
 
             {!allSelected && getSelectedType(row, col) === '' ? (

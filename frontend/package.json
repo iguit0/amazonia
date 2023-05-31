@@ -6,25 +6,26 @@
   "author": "Igor Alves <igorsk89@gmail.com> (https://github.com/iguit0)",
   "license": "MIT",
   "engines": {
-    "node" : ">=18"
+    "node": ">=18"
   },
   "repository": {
-		"type": "git",
-		"url": "https://github.com/iguit0/amazonia.git"
-	},
+    "type": "git",
+    "url": "https://github.com/iguit0/amazonia.git"
+  },
   "homepage": "https://amazonia-frontend.netlify.app/",
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",

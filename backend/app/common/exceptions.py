@@ -7,6 +7,7 @@ from fastapi import HTTPException, status
 
 class ApplicationException(HTTPException):
     """Base exception for application"""
+
     def __init__(
         self,
         status_code: int,
@@ -23,6 +24,7 @@ class ApplicationException(HTTPException):
 
 class ConflictException(ApplicationException):
     """Exception for conflict errors"""
+
     def __init__(
         self,
         code: int,
@@ -41,10 +43,11 @@ class ConflictException(ApplicationException):
 
 class UnprocessableEntityException(ApplicationException):
     """Exception for unprocessable entity errors"""
+
     def __init__(
         self,
         code: int,
-        message: str = "The instructions contained in the request or file could not be processed.",
+        message: str = "The instructions contained in the request or file could not be processed",
         detail: Any = None,
         headers: Union[Dict[str, Any], None] = None,
     ) -> None:
@@ -59,10 +62,11 @@ class UnprocessableEntityException(ApplicationException):
 
 class NotFoundException(ApplicationException):
     """Exception for not found errors"""
+
     def __init__(
         self,
         code: int,
-        message: str = "O recurso solicitado não foi encontrado no servidor.",
+        message: str = "Resource not found",
         detail: Any = None,
         headers: Union[Dict[str, Any], None] = None,
     ) -> None:
@@ -76,10 +80,12 @@ class NotFoundException(ApplicationException):
 
 
 class TimeoutException(ApplicationException):
+    """Exception for timeout errors"""
+
     def __init__(
         self,
         code: int = status.HTTP_408_REQUEST_TIMEOUT,
-        message: str = "O serviço não respondeu a tempo.",
+        message: str = "Timeout error",
         detail: Any = None,
         headers: Union[Dict[str, Any], None] = None,
     ) -> None:
@@ -93,10 +99,12 @@ class TimeoutException(ApplicationException):
 
 
 class ServiceUnavailableException(ApplicationException):
+    """Exception for service unavailable errors"""
+
     def __init__(
         self,
         code: int = status.HTTP_503_SERVICE_UNAVAILABLE,
-        message: str = "Há um problema com o serviço nesse momento, tente novamente mais tarde",
+        message: str = "Service unavailable, try again later",
         detail: Any = None,
         headers: Union[Dict[str, Any], None] = None,
     ) -> None:

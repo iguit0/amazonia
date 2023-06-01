@@ -4,6 +4,7 @@ VALID_POSITION = r"^[a-hA-H][1-8]$"
 
 
 class DeliveryCoordinatesRequest(BaseModel):
+    """Delivery coordinates request schema"""
     origin: str = Field(
         ...,
         title="Origin position. Where the drone is going to start",
@@ -26,6 +27,7 @@ class DeliveryCoordinatesRequest(BaseModel):
 
 
 class DeliveryResponse(BaseModel):
+    """Delivery response schema"""
     best_route: list[str] = Field(
         ..., title="Best route to deliver the package"
     )

@@ -1,9 +1,9 @@
-/.coverage
-/.env
-/.mypy_cache/
-/.pytest_cache/
-/.vscode/
+.coverage
+.env
+.mypy_cache/
+.pytest_cache/
+.vscode/
 /**/__pycache__/
-/coverage.xml
-/venv/
+coverage.xml
+venv/
 .idea

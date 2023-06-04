@@ -4,7 +4,6 @@ export const BoardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 400px;
-  box-sizing: border-box;
   outline: 1px solid #333;
 `
 

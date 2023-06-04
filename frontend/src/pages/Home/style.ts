@@ -9,6 +9,10 @@ export const PageWrapper = styled.div`
 
   background-color: #b1bfd8;
   background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 `
 
 export const HeaderText = styled.h1`
